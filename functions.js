@@ -60,6 +60,8 @@ const getMenuTable = async () => {
   return table(data, tableConfig)
 }
 
-const routeDesc = `<br><br><a href='/'>Tableau</a>, <a href='/api'>JSON</a>`
+const routeDesc =
+  `<br><br><a href='/'>Tableau</a>, <a href='/api'>JSON</a>` +
+  `<br><a href='https://github.com/rigwild/menu-ru-calais' target='_blank' rel='noopener'>GitHub</a>`
 
 export { getMenuData, getMenuTable, routeDesc }
