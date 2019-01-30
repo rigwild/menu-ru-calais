@@ -1,0 +1,24 @@
+{
+  "name": "menu-ru-calais",
+  "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@now/node@canary" },
+    { "src": "api.js", "use": "@now/node@canary" },
+    { "src": "unknownRoute.js", "use": "@now/node@canary" }
+  ],
+  "routes": [
+    {
+      "src": "^/",
+      "dest": "/index.js"
+    },
+    {
+      "src": "^/api",
+      "dest": "/api.js"
+    },
+    {
+      "src": "/(.*?)",
+      "dest": "/unknownRoute.js"
+    }
+  ],
+  "alias": "menu-ru-calais.now.sh"
+}
