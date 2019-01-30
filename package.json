@@ -1,14 +1,13 @@
 {
   "name": "menu-restaurant-universitaire",
   "version": "1.0.0",
-  "description": "",
+  "description": "Récupérer le menu du ru de Calais as a microservice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "now && now alias"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "rigwild",
+  "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.3.0",
     "node-html-parser": "^1.1.12",
