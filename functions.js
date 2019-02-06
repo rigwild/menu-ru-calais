@@ -20,7 +20,7 @@ const getMenuData = async () => {
     const meal = menuContent.map(y => ({
       name: y.childNodes[0].rawText,
       menu: y.childNodes[1].innerHTML
-        .match(/<li>.*?\<\/li>|Pas de service/g)
+        .match(/<li>.*?\<\/li>|Pas de service|Menu non communiqué/g)
         .map(w => w.replace(/<li>|<\/li>/g, ''))
         .filter(w => w)
     }))
@@ -64,4 +64,8 @@ const routeDesc =
   `<br><br><a href='/'>Tableau</a>, <a href='/api'>JSON</a>` +
   `<br><a href='https://github.com/rigwild/menu-ru-calais' target='_blank' rel='noopener'>GitHub</a>`
 
-export { getMenuData, getMenuTable, routeDesc }
+module.exports = {
+  getMenuData,
+  getMenuTable,
+  routeDesc
+}

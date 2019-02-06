@@ -1,4 +1,5 @@
 'use strict'
+
 const { getMenuData } = require('./functions')
 
 module.exports = async (req, res) => {
